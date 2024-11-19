@@ -465,7 +465,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
         if (result.path.any((entry) =>
             entry.target.runtimeType == _ForceDraggableWidgetRenderBox)) {
           widget.controller?._nowTargetForceDraggable = true;
-          _scMinffset = _sc.offset;
+          _scMinffset = _sc.hasClients ? _sc.offset : 0;
           _isHorizontalScrollableWidget = false;
         } else if (result.path.any((entry) =>
             entry.target.runtimeType == _HorizontalScrollableWidgetRenderBox)) {
